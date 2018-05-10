@@ -8,7 +8,7 @@ var server = http.Server(app);
 var io = socketIO(server);
 app.set('port', 2000);
 app.use('/client', express.static(__dirname + '/client'));
-app.use(express.static(path.join(__dirname, '/node_modules')));
+app.use('/client', express.static(__dirname + '/node_modules'));
 // Routing
 app.get('/', function(request, response) {
     response.sendFile(path.join(__dirname, 'index.html'));
