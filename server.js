@@ -66,10 +66,6 @@ io.on('connection', function(socket) {
             player.velX = player.velY = 0;
         }
         
-        if (data.start) {
-            io.sockets.emit('state', players);
-        }
-        
         if (data.check) {
             var w = data.width
             var h = data.height
@@ -95,9 +91,9 @@ io.on('connection', function(socket) {
         player.x += player.velX;
     });
 });
-//setInterval(function() {
-//    io.sockets.emit('state', players);
-//}, 1000 / 60);
+setInterval(function() {
+    io.sockets.emit('state', players);
+}, 1000 / 60);
 
 
 io.on('connection', function(socket) {
