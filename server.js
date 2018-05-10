@@ -30,8 +30,8 @@ var players = {};
 io.on('connection', function(socket) {
     socket.on('new player', function() {
         players[socket.id] = {
-            x: 500,
-            y: 500,
+            x: getRandomInt(1000),
+            y: getRandomInt(500),
             velY: 0,
             velX: 0,
             speed: 200,
