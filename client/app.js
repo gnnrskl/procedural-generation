@@ -43,25 +43,25 @@ document.addEventListener('keydown', function(event) {
 });
 document.addEventListener('keyup', function(event) {
     switch (event.keyCode) {
-        case 65: // A
+        case 65 || 37: // A
             movement.left = false;
             movement.check = true;
             movement.width = w;
             movement.height = h;
             break;
-        case 87: // W
+        case 87 || 38: // W
             movement.up = false;
             movement.check = true;
             movement.width = w;
             movement.height = h;
             break;
-        case 68: // D
+        case 68 || 39: // D
             movement.right = false;
             movement.check = true;
             movement.width = w;
             movement.height = h;
             break;
-        case 83: // S
+        case 83 || 40: // S
             movement.down = false;
             movement.check = true;
             movement.width = w;
