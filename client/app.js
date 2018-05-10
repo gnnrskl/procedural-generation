@@ -105,10 +105,11 @@ var h = window.innerHeight
 canvas.width = w
 canvas.height = h
 
+ctx.fillStyle = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+
 socket.on('state', function(players) {
     
   ctx.clearRect(0, 0, w, h);
-  ctx.fillStyle = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
     
   for (var id in players) {
     var player = players[id];
