@@ -89,11 +89,13 @@ io.on('connection', function(socket) {
 
         player.velX *= player.friction;
         player.x += player.velX;
+        
+        io.sockets.emit('state', players);
     });
 });
-setInterval(function() {
-    io.sockets.emit('state', players);
-}, 1000 / 60);
+//setInterval(function() {
+//    io.sockets.emit('state', players);
+//}, 1000 / 60);
 
 
 io.on('connection', function(socket) {
