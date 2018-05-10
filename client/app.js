@@ -43,6 +43,7 @@ document.addEventListener('keydown', function(event) {
         case 13:
             movement.start = true;
             movementemit()
+            socket.emit('new player');
     }
 });
 document.addEventListener('keyup', function(event) {
@@ -82,7 +83,7 @@ document.addEventListener('keyup', function(event) {
 
 var socket = io()
 
-socket.emit('new player');
+
 //setInterval(function() {
 //  socket.emit('movement', movement);
 //}, 1000 / 60);
