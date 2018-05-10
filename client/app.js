@@ -6,7 +6,8 @@ var movement = {
     stop: false,
     check: false,
     width: 0,
-    height: 0
+    height: 0,
+    start: false;
 }
 document.addEventListener('keydown', function(event) {
     switch (event.keyCode) {
@@ -39,6 +40,9 @@ document.addEventListener('keydown', function(event) {
             movement.check = true;
             movement.width = w;
             movement.height = h;
+        case 13:
+            movement.start = true;
+            movementemit()
     }
 });
 document.addEventListener('keyup', function(event) {
@@ -88,11 +92,8 @@ function movementemit() {
     socket.emit('movement', movement);
 }
 
-movementemit()
-
 var canvas = document.getElementById('mainCanvas');
 var ctx = canvas.getContext('2d');
-
 
 var w = window.innerWidth
 var h = window.innerHeight
