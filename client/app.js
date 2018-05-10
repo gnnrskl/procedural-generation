@@ -108,10 +108,9 @@ canvas.height = h
 socket.on('state', function(players) {
     
   ctx.clearRect(0, 0, w, h);
-  ctx.fillStyle = 'black';
+  ctx.fillStyle = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
     
   for (var id in players) {
-      
     var player = players[id];
     ctx.beginPath();
     ctx.arc(player.x, player.y, 5, 0, 2 * Math.PI);
