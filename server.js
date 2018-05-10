@@ -6,7 +6,7 @@ var socketIO = require('socket.io');
 var app = express();
 var server = http.Server(app);
 var io = socketIO(server);
-app.set('port', 2000);
+app.set('port', process.env.PORT);
 app.use('/client', express.static(__dirname + '/client'));
 app.use('/client', express.static(__dirname + '/node_modules'));
 // Routing
@@ -14,7 +14,7 @@ app.get('/', function(request, response) {
     response.sendFile(path.join(__dirname, 'index.html'));
 });
 // Starts the server.
-server.listen(2000, function() {
+server.listen(process.env.PORT, function() {
     console.log('Starting server on port 2000');
 });
 
