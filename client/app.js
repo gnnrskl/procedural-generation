@@ -78,6 +78,8 @@ document.addEventListener('keyup', function(event) {
             movement.width = 0;
             movement.height = 0;
             break;
+        case 13:
+            movement.start = false;
     }
 });
 
