@@ -7,7 +7,7 @@ var movement = {
     check: false,
     width: 0,
     height: 0,
-    start: false;
+    start: false
 }
 document.addEventListener('keydown', function(event) {
     switch (event.keyCode) {
