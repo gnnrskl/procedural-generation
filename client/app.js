@@ -112,7 +112,6 @@ socket.on('state', function(players) {
   ctx.clearRect(0, 0, w, h);
   
   for (var id in players) {
-    console.log(players[id])
     var player = players[id];
     ctx.beginPath();
     ctx.arc(player.x, player.y, 5, 0, 2 * Math.PI);
