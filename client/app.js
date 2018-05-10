@@ -42,7 +42,6 @@ document.addEventListener('keydown', function(event) {
             movement.height = h;
         case 13:
             movement.start = true;
-            movementemit()
     }
 });
 document.addEventListener('keyup', function(event) {
@@ -93,6 +92,7 @@ function movementemit() {
     requestAnimationFrame(movementemit)
     socket.emit('movement', movement);
 }
+movementemit()
 
 socket.emit('new player');
 
