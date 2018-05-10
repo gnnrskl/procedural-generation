@@ -43,7 +43,6 @@ document.addEventListener('keydown', function(event) {
         case 13:
             movement.start = true;
             movementemit()
-            socket.emit('new player');
     }
 });
 document.addEventListener('keyup', function(event) {
@@ -94,6 +93,8 @@ function movementemit() {
     requestAnimationFrame(movementemit)
     socket.emit('movement', movement);
 }
+
+socket.emit('new player');
 
 var canvas = document.getElementById('mainCanvas');
 var ctx = canvas.getContext('2d');
