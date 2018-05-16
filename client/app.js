@@ -165,7 +165,7 @@ socket.on('state', function(players) {
     ctx.beginPath();
     ctx.arc(player.x, player.y, 5, 0, 2 * Math.PI);
     ctx.font = "30px Arial";
-    ctx.strokeText("Controls: WASD keys to move, SPACE key to stop movement.",5,30);
+    ctx.strokeText("Controls: WASD or ARROW keys to move, SPACE key to stop movement.",5,30);
     ctx.fill();
   }
 });
