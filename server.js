@@ -44,13 +44,6 @@ io.on('connection', function(socket) {
     socket.on('movement', function(data) {
         var player = players[socket.id] || {};
         
-        if (player.x < player.x + player.width &&
-            player.x + player.width > player.x &&
-            player.y < player.y + player.height &&
-            player.height + player.y > player.y) {
-            console.log('oof')
-        }
-        
         if (data.up) {
             if (player.velY > -200) {
                 player.velY--;
@@ -79,18 +72,18 @@ io.on('connection', function(socket) {
         if (data.check) {
             var w = data.width
             var h = data.height
-            if (player.x >= w) {
-                player.x = w - 5;
+            if (player.x >= w - 5) {
+                player.x = w - 10;
                 player.velX = -player.velX
-            } else if (player.x <= 5) {
-                player.x = 5;
+            } else if (player.x <= 10) {
+                player.x = 10;
                 player.velX = -player.velX
             }
-            if (player.y > h) {
-                player.y = h - 5;
+            if (player.y > h - 5) {
+                player.y = h - 10;
                 player.velY = -player.velY
-            } else if (player.y <= 5) {
-                player.y = 5;
+            } else if (player.y <= 10) {
+                player.y = 10;
                 player.velY = -player.velY
             }
         }
