@@ -116,9 +116,9 @@ socket.on('state', function(players) {
     var player = players[id];
     ctx.beginPath();
     ctx.arc(player.x, player.y, 5, 0, 2 * Math.PI);
+    ctx.font = "30px Arial";
+    ctx.strokeText("Controls: WASD keys to move, SPACE key to stop movement.",0,100);
     ctx.fill();
   }
 });
 
-ctx.font = "30px Arial";
-ctx.strokeText("Controls: WASD keys to move, SPACE key to stop movement.",0,100);
