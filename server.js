@@ -30,17 +30,27 @@ var players = {};
 io.on('connection', function(socket) {
     socket.on('new player', function() {
         players[socket.id] = {
-            x: getRandomInt(1000),
-            y: getRandomInt(500),
+            x: 0,
+            y: 0,
             velY: 0,
             velX: 0,
             speed: 200,
             friction: 0.9999,
-            keys: []
+            keys: [],
+            width: 5,
+            height: 5
         };
     });
     socket.on('movement', function(data) {
         var player = players[socket.id] || {};
+        
+        if (player.x < player.x + player.width &&
+            player.x + player.width > player.x &&
+            player.y < player.y + player.height &&
+            player.height + player.y > player.y) {
+            console.log('oof')
+        }
+        
         if (data.up) {
             if (player.velY > -200) {
                 player.velY--;
