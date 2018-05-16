@@ -160,7 +160,8 @@ ctx.strokeText("Controls: WASD or ARROW keys to move, SPACE key to stop movement
 
 setTimeout(function() {
     ctx.font = "0px Comic Sans MS"
-}, 50000)
+    console.log('oof')
+}, 5000)
 
 socket.on('state', function(players) {
     
