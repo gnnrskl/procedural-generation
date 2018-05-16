@@ -93,10 +93,6 @@ io.on('connection', function(socket) {
 
         player.velX *= player.friction;
         player.x += player.velX;
-        
-        if (player.x == player.x) {
-            console.log('oof')
-        }
     });
 });
 setInterval(function() {
