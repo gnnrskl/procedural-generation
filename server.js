@@ -30,8 +30,8 @@ var players = {};
 io.on('connection', function(socket) {
     socket.on('new player', function() {
         players[socket.id] = {
-            x: 0,
-            y: 0,
+            x: 500,
+            y: 500,
             velY: 0,
             velX: 0,
             speed: 200,
@@ -72,18 +72,18 @@ io.on('connection', function(socket) {
         if (data.check) {
             var w = data.width
             var h = data.height
-            if (player.x >= w - 5) {
-                player.x = w - 10;
+            if (player.x >= w - 15) {
+                player.x = w - 20;
                 player.velX = -player.velX
-            } else if (player.x <= 10) {
-                player.x = 10;
+            } else if (player.x <= 20) {
+                player.x = 20;
                 player.velX = -player.velX
             }
-            if (player.y > h - 5) {
-                player.y = h - 10;
+            if (player.y > h - 15) {
+                player.y = h - 20;
                 player.velY = -player.velY
-            } else if (player.y <= 10) {
-                player.y = 10;
+            } else if (player.y <= 20) {
+                player.y = 20;
                 player.velY = -player.velY
             }
         }
