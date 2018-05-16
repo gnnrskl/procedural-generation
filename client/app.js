@@ -171,6 +171,7 @@ socket.on('state', function(players) {
     var player = players[id];
     ctx.beginPath();
     ctx.arc(player.x, player.y, 5, 0, 2 * Math.PI);
+    ctx.fill()
   }
 });
 
