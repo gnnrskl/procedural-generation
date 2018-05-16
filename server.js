@@ -95,6 +95,9 @@ setInterval(function() {
     io.sockets.emit('state', players);
 }, 1000 / 60);
 
+setInterval(function() {
+    io.sockets.emit('directions', players);
+}, 1000 / 60);
 
 io.on('connection', function(socket) {
     console.log('client connected')
