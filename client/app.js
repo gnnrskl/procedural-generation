@@ -161,6 +161,7 @@ ctx.strokeText("Controls: WASD or ARROW keys to move, SPACE key to stop movement
 
 setTimeout(function () {
     ctx.font = "0px Comic Sans MS"
+    console.log('oof')
 }, 1000);
 var start = Date.now();
 while (Date.now() < start + 6000) {}
