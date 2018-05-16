@@ -37,8 +37,8 @@ io.on('connection', function(socket) {
             speed: 200,
             friction: 0.9999,
             keys: [],
-            width: 5,
-            height: 5
+            width: 10,
+            height: 10
         };
     });
     socket.on('movement', function(data) {
