@@ -41,6 +41,7 @@ io.on('connection', function(socket) {
             height: 10
         };
     });
+    
     socket.on('movement', function(data) {
         var player = players[socket.id] || {};
         
@@ -92,6 +93,10 @@ io.on('connection', function(socket) {
 
         player.velX *= player.friction;
         player.x += player.velX;
+        
+        if (player.x == player.x) {
+            console.log('oof')
+        }
     });
 });
 setInterval(function() {
