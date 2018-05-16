@@ -16,19 +16,6 @@
             border: 0px solid black;
             position: absolute;
           }
-            
-          div {
-             .button {
-                background-color: #000000; /* Green */
-                border: none;
-                color: white;
-                padding: 15px 32px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-            }
-          }
         </style>
         <script src="/socket.io/socket.io.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -38,9 +25,7 @@
             <p><b>Controls: Use the WASD or ARROW keys to move and use the SPACE key to stop movement!</b></p>
         </div>
         <script>
-            $("div.button").click(function() {
-                $("#dirText").delay(2000).slideUp(300)
-            });
+            $("#dirText").delay(2000).slideUp(300)
         </script>
     </body>
     <canvas id="mainCanvas"></canvas>
