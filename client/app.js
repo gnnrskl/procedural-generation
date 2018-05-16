@@ -119,3 +119,6 @@ socket.on('state', function(players) {
     ctx.fill();
   }
 });
+
+ctx.font = "30px Arial";
+ctx.strokeText("Controls: WASD keys to move, SPACE key to stop movement.",w/2,h);
