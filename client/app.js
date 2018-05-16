@@ -11,25 +11,49 @@ var movement = {
 }
 document.addEventListener('keydown', function(event) {
     switch (event.keyCode) {
-        case 65 || 37: // A
+        case 65: // A 37
             movement.left = true;
             movement.check = true;
             movement.width = w;
             movement.height = h;
             break;
-        case 87 || 38: // W
+        case 87: // W 38
             movement.up = true;
             movement.check = true;
             movement.width = w;
             movement.height = h;
             break;
-        case 68 || 39: // D
+        case 68: // D 39
             movement.right = true;
             movement.check = true;
             movement.width = w;
             movement.height = h;
             break;
-        case 83 || 40: // S
+        case 83: // S 40
+            movement.down = true;
+            movement.check = true;
+            movement.width = w;
+            movement.height = h;
+            break;
+        case 37:
+            movement.left = true;
+            movement.check = true;
+            movement.width = w;
+            movement.height = h;
+            break;
+        case 38:
+            movement.up = true;
+            movement.check = true;
+            movement.width = w;
+            movement.height = h;
+            break;
+        case 39:
+            movement.right = true;
+            movement.check = true;
+            movement.width = w;
+            movement.height = h;
+            break;
+        case 40:
             movement.down = true;
             movement.check = true;
             movement.width = w;
