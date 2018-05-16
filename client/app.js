@@ -167,8 +167,8 @@ socket.on('state', function(players) {
   }
 });
 
-socket.on('state', function() {
-    ctx.font = "30px Comic Sans MS";
+socket.on('directions', function() {
+    ctx.font = "20px Comic Sans MS";
     ctx.strokeText("Controls: WASD or ARROW keys to move, SPACE key to stop movement.",5,30);
     
     if (movement.check == true) {
