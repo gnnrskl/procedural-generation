@@ -155,17 +155,6 @@ canvas.height = h
 
 ctx.fillStyle = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
 
-ctx.font = "20px Comic Sans MS";
-ctx.strokeText("Controls: WASD or ARROW keys to move, SPACE key to stop movement.",5,30);
-
-
-setTimeout(function () {
-    ctx.font = "0px Comic Sans MS"
-    console.log('oof')
-}, 1000);
-var start = Date.now();
-while (Date.now() < start + 6000) {}
-
 socket.on('state', function(players) {
     
   ctx.clearRect(0, 0, w, h);
