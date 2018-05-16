@@ -46,25 +46,25 @@ document.addEventListener('keydown', function(event) {
 });
 document.addEventListener('keyup', function(event) {
     switch (event.keyCode) {
-        case 65 || 37: // A
+        case 65: case 37:: // A
             movement.left = false;
             movement.check = true;
             movement.width = w;
             movement.height = h;
             break;
-        case 87 || 38: // W
+        case 87: case 38: // W
             movement.up = false;
             movement.check = true;
             movement.width = w;
             movement.height = h;
             break;
-        case 68 || 39: // D
+        case 68: case 39: // D
             movement.right = false;
             movement.check = true;
             movement.width = w;
             movement.height = h;
             break;
-        case 83 || 40: // S
+        case 83: case 40: // S
             movement.down = false;
             movement.check = true;
             movement.width = w;
@@ -117,7 +117,7 @@ socket.on('state', function(players) {
     ctx.beginPath();
     ctx.arc(player.x, player.y, 5, 0, 2 * Math.PI);
     ctx.font = "30px Arial";
-    ctx.strokeText("Controls: WASD keys to move, SPACE key to stop movement.",0,30);
+    ctx.strokeText("Controls: WASD keys to move, SPACE key to stop movement.",5,30);
     ctx.fill();
   }
 });
