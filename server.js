@@ -89,7 +89,7 @@ io.on('connection', function(socket) {
                 player.velY = -player.velY
             }
             
-            if (players[socket.id].x == players[socket.id].x && players[socket.id].y == players[socket.id].y && players[socket.id].id != players[socket.id].id) {
+            if (players[socket.id].x == players[socket.id].x && players[socket.id].y == players[socket.id].y && players != players) {
                 console.log('oof')
             }
         }
