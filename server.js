@@ -104,6 +104,10 @@ setInterval(function() {
     io.sockets.emit('state', players);
 }, 1000 / 60);
 
+setInterval(function() {
+    console.log(players)
+}, 1000);
+
 io.on('connection', function(socket) {
     console.log('client connected')
     connectedCount++;
