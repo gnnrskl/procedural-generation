@@ -44,7 +44,7 @@ io.on('connection', function(socket) {
     
     socket.on('movement', function(data) {
         var player = players[socket.id] || {};
-        console.log(players)
+        console.log(players[0])
         if (data.up) {
             if (player.velY > -200) {
                 player.velY--;
