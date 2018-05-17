@@ -38,13 +38,14 @@ io.on('connection', function(socket) {
             friction: 0.9999,
             keys: [],
             width: 10,
-            height: 10
+            height: 10,
+            id: getRandomInt(9999)
         };
     });
     
     socket.on('movement', function(data) {
         var player = players[socket.id] || {};
-        console.log(players[0])
+
         if (data.up) {
             if (player.velY > -200) {
                 player.velY--;
@@ -87,6 +88,8 @@ io.on('connection', function(socket) {
                 player.y = 20;
                 player.velY = -player.velY
             }
+            
+            if (players[socket.id].x == players[socket.id].x && players[socket.id].y == players[socket.id].y && players[socket.id].id != players[socket.id].id)
         }
         player.velY *= player.friction;
         player.y += player.velY;
