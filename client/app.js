@@ -3,11 +3,9 @@ var movement = {
     down: false,
     left: false,
     right: false,
-    stop: false,
     check: false,
     width: 0,
     height: 0,
-    start: false
 }
 document.addEventListener('keydown', function(event) {
     switch (event.keyCode) {
@@ -59,13 +57,6 @@ document.addEventListener('keydown', function(event) {
             movement.width = w;
             movement.height = h;
             break;
-        case 32:
-            movement.stop = true
-            movement.check = true;
-            movement.width = w;
-            movement.height = h;
-        case 13:
-            movement.start = true;
     }
 });
 document.addEventListener('keyup', function(event) {
@@ -118,14 +109,6 @@ document.addEventListener('keyup', function(event) {
             movement.width = w;
             movement.height = h;
             break;
-        case 32:
-            movement.stop = false;
-            movement.check = false;
-            movement.width = 0;
-            movement.height = 0;
-            break;
-        case 13:
-            movement.start = false;
     }
 });
 
