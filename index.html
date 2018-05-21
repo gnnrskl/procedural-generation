@@ -51,15 +51,14 @@
     <body text="black">
         <div id="mainMenuUI">
             <p align="center"><b><font face="Comic Sans MS">Controls: Use the WASD or ARROW keys to move.</font></b></p>
+            <button onclick="btnClick()">Start Game</button>
         </div>
-        <button id="startbutton" align="center" onclick="btnClick()">Start Game</button>
         <script>
             var socket = io()
             
             function btnClick() {
                 socket.emit('startgame')
-                $("#mainMenuUI").delay(500).slideUp(300)
-                $("#startbutton").delay(500).slideUp(300)
+                $("#mainMenuUI").delay(500).slideUp(1000)
             }
         </script>
     </body>
