@@ -32,10 +32,6 @@ io.on('connection', function(socket) {
         players[socket.id] = {
             x: 500,
             y: 500,
-            velY: 0,
-            velX: 0,
-            speed: 200,
-            friction: 0.9999,
             keys: [],
             width: 10,
             height: 10,
@@ -45,30 +41,17 @@ io.on('connection', function(socket) {
     
     socket.on('movement', function(data) {
         var player = players[socket.id] || {};
-
         if (data.up) {
-            if (player.velY > -200) {
-                player.velY--;
-            }
+            player.y -= 5
         }
         if (data.down) {
-            if (player.velY < 200) {
-                player.velY++;           
-            }
+            player.y += 5
         }
         if (data.right) {
-            if (player.velX < 200) {
-                player.velX++;
-            }
+            player.x += 5
         }
         if (data.left) {
-            if (player.velX > -player.speed) {
-                player.velX--;
-            }
-        }
-
-        if (data.stop) {
-            player.velX = player.velY = 0;
+            player.y -= 5
         }
         
         if (data.check) {
@@ -89,15 +72,7 @@ io.on('connection', function(socket) {
                 player.velY = -player.velY
             }
             
-            if (players[socket.id].x == players[socket.id].x && players[socket.id].y == players[socket.id].y && players != players) {
-                console.log('oof')
-            }
         }
-        player.velY *= player.friction;
-        player.y += player.velY;
-
-        player.velX *= player.friction;
-        player.x += player.velX;
     });
 });
 setInterval(function() {
