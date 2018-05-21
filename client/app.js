@@ -124,9 +124,6 @@ function movementemit() {
     socket.emit('movement', movement);
 }
 
-
-socket.emit('new player');
-
 function startGame() {
     socket.emit('new player');
     movementemit()
