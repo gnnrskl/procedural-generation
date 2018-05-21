@@ -51,7 +51,7 @@ io.on('connection', function(socket) {
             player.x += 5
         }
         if (data.left) {
-            player.y -= 5
+            player.x -= 5
         }
         
         if (data.check) {
