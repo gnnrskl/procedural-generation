@@ -123,15 +123,14 @@ function movementemit() {
     requestAnimationFrame(movementemit)
     socket.emit('movement', movement);
 }
-
-socket.on('startgame', function() {
-    startGame()
-})
-
 function startGame() {
     socket.emit('new player');
     movementemit()
 }
+
+socket.on('startgame', function() {
+    startGame()
+})
 
 var canvas = document.getElementById('mainCanvas');
 var ctx = canvas.getContext('2d');
