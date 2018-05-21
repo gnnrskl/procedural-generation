@@ -17,17 +17,13 @@
             position: absolute;
             z-index: 1;
           }
-          #dirText {
-              top: 50%;
-              left: 50%;
-          }
         </style>
         <script src="/socket.io/socket.io.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body text="black">
         <div id="dirText" text="background-color:white">
-            <p align="center"><b><font face="Comic Sans MS">Controls: Use the WASD or ARROW keys to move.</font></b></p>
+            <p style="left:50%;top:50%" align="center"><b><font face="Comic Sans MS">Controls: Use the WASD or ARROW keys to move.</font></b></p>
         </div>
         <script>
             $("#dirText").delay(7000).slideUp(300)
