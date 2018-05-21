@@ -25,6 +25,22 @@
               margin-top: 0px;
               margin-left: -300px;
           }
+          button {
+              -webkit-border-radius: 0;
+              -moz-border-radius: 0;
+              border-radius: 0px;
+              font-family: Courier New;
+              color: #ffffff;
+              font-size: 20px;
+              background: #000000;
+              padding: 10px 20px 10px 20px;
+              border: solid #000000 2px;
+              text-decoration: none
+          }
+          button:hover {
+              background: #3d3f40;
+              text-decoration: none;
+          }
         </style>
         <script src="/socket.io/socket.io.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -33,6 +49,7 @@
         <div id="mainMenuUI">
             <p align="center"><b><font face="Comic Sans MS">Controls: Use the WASD or ARROW keys to move.</font></b></p>
         </div>
+        <button onclick="function()">Start Game</button>
         <script>
             var socket = io()
             
