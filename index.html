@@ -49,13 +49,14 @@
         <div id="mainMenuUI">
             <p align="center"><b><font face="Comic Sans MS">Controls: Use the WASD or ARROW keys to move.</font></b></p>
         </div>
-        <button onclick="function()">Start Game</button>
+        <button onclick="btnClick()">Start Game</button>
         <script>
             var socket = io()
             
-            
-            
-            $("#mainMenuUI").delay(7000).slideUp(300)
+            function btnClick() {
+                socket.emit('startgame')
+                $("#mainMenuUI").delay(500).slideUp(300)
+            }
         </script>
     </body>
     <canvas id="mainCanvas"></canvas>
