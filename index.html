@@ -55,13 +55,12 @@
         </div>
         <script src="/client/app.js"></script>
         <script>
-            var app = require('/client/app.js')
             var socket = io()
             
             function btnClick() {
                 $("#mainMenuUI").delay(500).slideUp(1000)
                 socket.emit('new player')
-                app.movementemit()
+                movementemit()
             }
         </script>
     </body>
