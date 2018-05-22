@@ -125,8 +125,7 @@ function movementemit() {
 }
 
 socket.on('startgame', function() {
-    socket.emit('new player')
-    movementemit()
+    console.log('oof')
 });
 
 var canvas = document.getElementById('mainCanvas');
