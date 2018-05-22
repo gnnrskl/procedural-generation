@@ -1,3 +1,20 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Explore
+ @gnnrskl
+Sign out
+0
+0 0 gnnrskl/procedural-generation
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
+procedural-generation/index.html
+4f03330  20 hours ago
+@gnnrskl gnnrskl Update index.html
+      
+68 lines (66 sloc)  2.07 KB
 <!DOCTYPE html>
 <html>
     <head>
@@ -26,7 +43,9 @@
               margin-left: -300px;
           }
           button {
+              margin: 0 auto;
               text-align: center;
+              display: block;
               -webkit-border-radius: 0;
               -moz-border-radius: 0;
               border-radius: 0px;
@@ -52,8 +71,11 @@
             <button onclick="btnClick()">Start Game</button>
         </div>
         <script>
+            var socket = io()
+            
             function btnClick() {
-                $("#mainMenuUI").delay(500).slideUp(700)
+                socket.emit('startgame')
+                $("#mainMenuUI").delay(500).slideUp(1000)
             }
         </script>
     </body>
