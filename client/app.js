@@ -127,7 +127,7 @@ function movementemit() {
 socket.on('startgame', function() {
     socket.emit('new player')
     movementemit()
-}
+});
 
 var canvas = document.getElementById('mainCanvas');
 var ctx = canvas.getContext('2d');
