@@ -57,6 +57,7 @@
             var socket = io()
             
             function btnClick() {
+                socket.emit('startgame')
                 $("#mainMenuUI").delay(500).slideUp(1000)
             }
         </script>
