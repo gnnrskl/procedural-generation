@@ -53,16 +53,16 @@
             <p align="center"><b><font face="Comic Sans MS">Controls: Use the WASD or ARROW keys to move.</font></b></p>
             <button onclick="btnClick()">Start Game</button>
         </div>
+        <script src="/client/app.js"></script>
         <script>
             var socket = io()
             
             function btnClick() {
                 $("#mainMenuUI").delay(500).slideUp(1000)
                 socket.emit('new player')
-                movementemit()
+                app.movementemit()
             }
         </script>
     </body>
     <canvas id="mainCanvas"></canvas>
-    <script src="/client/app.js"></script>
     </html>
