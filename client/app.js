@@ -124,10 +124,6 @@ function movementemit() {
     socket.emit('movement', movement);
 }
 
-socket.on('startgame', function() {
-    console.log('oof')
-});
-
 var canvas = document.getElementById('mainCanvas');
 var ctx = canvas.getContext('2d');
 
@@ -136,8 +132,6 @@ var h = window.innerHeight
 
 canvas.width = w
 canvas.height = h
-
-ctx.fillStyle = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
 
 socket.on('state', function(players) {
     
