@@ -128,9 +128,8 @@ function startGame() {
     movementemit()
 }
 
-socket.on('startgame', function() {
-    startGame()
-})
+
+startGame()
 
 var canvas = document.getElementById('mainCanvas');
 var ctx = canvas.getContext('2d');
