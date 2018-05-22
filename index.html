@@ -53,11 +53,8 @@
             <p align="center"><b><font face="Comic Sans MS">Controls: Use the WASD or ARROW keys to move.</font></b></p>
             <button onclick="btnClick()">Start Game</button>
         </div>
-        <script>
-            var socket = io()
-            
+        <script>            
             function btnClick() {
-                socket.emit('startgame')
                 $("#mainMenuUI").delay(100).slideUp(1000)
             }
         </script>
