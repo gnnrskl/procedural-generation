@@ -38,7 +38,7 @@
               background: #000000;
               padding: 10px 20px 10px 20px;
               border: solid #000000 2px;
-              text-decoration: none;
+              text-decoration: none
           }
           button:hover {
               background: #3d3f40;
@@ -53,9 +53,11 @@
             <p align="center"><b><font face="Comic Sans MS">Controls: Use the WASD or ARROW keys to move.</font></b></p>
             <button onclick="btnClick()">Start Game</button>
         </div>
-        <script>            
+        <script>
+            var socket = io()
+            
             function btnClick() {
-                $("#mainMenuUI").delay(100).slideUp(1000)
+                $("#mainMenuUI").delay(500).slideUp(1000)
             }
         </script>
     </body>
