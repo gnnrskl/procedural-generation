@@ -124,8 +124,6 @@ function movementemit() {
     socket.emit('movement', movement);
 }
 
-socket.emit('new player')
-movementemit()
 
 
 var canvas = document.getElementById('mainCanvas');
