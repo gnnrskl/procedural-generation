@@ -17,49 +17,49 @@ document.addEventListener('keydown', function(event) {
             movement.check = true;
             movement.width = w;
             movement.height = h;
-            ctx.translate(-5,0);
+            //ctx.translate(-5,0);
             break;
         case 87: // W 38
             movement.up = true;
             movement.check = true;
             movement.width = w;
             movement.height = h;
-            ctx.translate(0,-5);
+            //ctx.translate(0,-5);
             break;
         case 68: // D 39
             movement.right = true;
             movement.check = true;
             movement.width = w;
             movement.height = h;
-            ctx.translate(5,0);
+            //ctx.translate(5,0);
             break;
         case 83: // S 40
             movement.down = true;
             movement.check = true;
             movement.width = w;
             movement.height = h;
-            ctx.translate(0,5);
+            //ctx.translate(0,5);
             break;
         case 37: // left
             movement.left = true;
             movement.check = true;
             movement.width = w;
             movement.height = h;
-            ctx.translate(-5,0);
+            //ctx.translate(-5,0);
             break;
         case 38: // up
             movement.up = true;
             movement.check = true;
             movement.width = w;
             movement.height = h;
-            ctx.translate(0,-5);
+            //ctx.translate(0,-5);
             break;
         case 39: // right
             movement.right = true;
             movement.check = true;
             movement.width = w;
             movement.height = h;
-            ctx.translate(5,0);
+            //ctx.translate(5,0);
             break;
         case 40: //down
             movement.down = true;
@@ -149,7 +149,7 @@ socket.on('state', function(players) {
   for (var id in players) {
     var player = players[id];
     ctx.beginPath();
-    ctx.arc(w/2, h/2, 20, 0, 2 * Math.PI);
+    ctx.arc(player.x, player.y, 20, 0, 2 * Math.PI);
     ctx.fill()
   }
 });
