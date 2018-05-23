@@ -1,3 +1,6 @@
+var canvas = document.getElementById('mainCanvas');
+var ctx = canvas.getContext('2d');
+
 var movement = {
     up: false,
     down: false,
@@ -131,9 +134,6 @@ function movementemit() {
     requestAnimationFrame(movementemit)
     socket.emit('movement', movement);
 }
-
-var canvas = document.getElementById('mainCanvas');
-var ctx = canvas.getContext('2d');
 
 var w = window.innerWidth
 var h = window.innerHeight
