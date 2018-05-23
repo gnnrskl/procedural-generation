@@ -24,7 +24,7 @@ document.addEventListener('keydown', function(event) {
             movement.check = true;
             movement.width = w;
             movement.height = h;
-            ctx.translate(0,5);
+            ctx.translate(0,-5);
             break;
         case 68: // D 39
             movement.right = true;
@@ -38,7 +38,7 @@ document.addEventListener('keydown', function(event) {
             movement.check = true;
             movement.width = w;
             movement.height = h;
-            ctx.translate(0,-5);
+            ctx.translate(0,5);
             break;
         case 37: // left
             movement.left = true;
@@ -52,7 +52,7 @@ document.addEventListener('keydown', function(event) {
             movement.check = true;
             movement.width = w;
             movement.height = h;
-            ctx.translate(0,5);
+            ctx.translate(0,-5);
             break;
         case 39: // right
             movement.right = true;
@@ -66,7 +66,7 @@ document.addEventListener('keydown', function(event) {
             movement.check = true;
             movement.width = w;
             movement.height = h;
-            ctx.translate(0,-5);
+            ctx.translate(0,5);
             break;
     }
 });
