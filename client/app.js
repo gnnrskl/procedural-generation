@@ -66,7 +66,7 @@ document.addEventListener('keydown', function(event) {
             movement.check = true;
             movement.width = w;
             movement.height = h;
-            ctx.translate(0,5);
+            //ctx.translate(0,5);
             break;
     }
 });
