@@ -46,17 +46,6 @@
               background: #3d3f40;
               text-decoration: none;
           }
-          #nameInput {
-              position: absolute;
-              left: 100px;
-              top: 20px;
-              width: 70%;
-              height: 100;
-              border: none;
-              text-align: center;
-              font-weight: bold;
-              background-color: #d9d9d9;
-          }
         </style>
         <script src="/socket.io/socket.io.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.js"
@@ -66,7 +55,6 @@
     <body text="black">
         <div id="mainMenuUI">
             <p align="center"><b><font face="Comic Sans MS">Controls: Use the WASD or ARROW keys to move.</font></b></p>
-            <input type="text" id="nameInput" maxLength="16" placeholder="Enter Name" align="center">
             <button onclick="btnClick()">Start Game</button>
         </div>
         <canvas id="mainCanvas">
